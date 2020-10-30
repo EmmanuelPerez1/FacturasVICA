@@ -12,11 +12,13 @@
     <form id="readerXML">
         <label for="archXML">Texto a analizar: </label>
         <input type="text" id="xmlText"> <br>
-        <button id="btnXML">Enviar</button>
-    </form>
+        <button id="btnXML">Extraer Datos</button>
+    </form><br>
+    <button id="limpiarTexto" onclick="limpiarTexto()">Borrar texto</button>
     <div id="respuestas">
         <label for="resultUUID">UUID: </label>
         <p id="resultUUID"></p>
+        <!-- <button onclick="seleccionarTexto(resultUUID)">Copiar</button><br> -->
         <label for="fechaTimbrado">Fecha de Timbrado: </label>
         <p id="fechaTimbrado"></p>
         <label for="subTotal">Sub Total: </label>
