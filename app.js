@@ -20,20 +20,21 @@ document.getElementById('readerXML').addEventListener('submit', function(e) {
     document.getElementById('fechaTimbrado').innerHTML = `${resultfT[0]}`;
     document.getElementById('subTotal').innerHTML = `${resultsT[0].replace('SubTotal="', '')}`;
     document.getElementById('Total').innerHTML = `${resultT[0].replace(' Total="', '')}`;
-    if (!resultOC == null) {
+    if (resultOC) {
         document.getElementById('NUMEOC').innerHTML = `${resultOC[0].replace('NUMEOC  ', '')}`;
     }
 
-    if (!resultcdP == null) {
+    if (resultcdP) {
         document.getElementById('condicionesDePago').innerHTML = `${resultcdP[0].replace('CondicionesDePago = ', '')}`;
     }
 })
 
 function limpiarTexto() {
     document.getElementById('xmlText').value = '';
+    document.getElementById('resultUUID').innerHTML = '';
+    document.getElementById('fechaTimbrado').innerHTML = '';
+    document.getElementById('subTotal').innerHTML = '';
+    document.getElementById('Total').innerHTML = '';
+    document.getElementById('NUMEOC').innerHTML = '';
+    document.getElementById('condicionesDePago').innerHTML = '';
 }
-
-// function seleccionarTexto(id_seleccionado) {
-//     id_seleccionado.value.select();
-//     document.execCommand('copy');
-// }

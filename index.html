@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <title>XML Analizador</title>
 </head>
 
 <body>
     <h1>Analizador</h1>
     <form id="readerXML">
-        <label for="archXML">Texto a analizar: </label>
+        <p>Texto a analizar: </p>
         <input type="text" id="xmlText"> <br>
         <button id="btnXML">Extraer Datos</button>
-    </form><br>
-    <button id="limpiarTexto" onclick="limpiarTexto()">Borrar texto</button>
+        <button id="limpiarTexto" onclick="limpiarTexto()">Borrar texto</button>
+    </form>
     <div id="respuestas">
         <label for="resultUUID">UUID: </label>
         <p id="resultUUID"></p>
-        <!-- <button onclick="seleccionarTexto(resultUUID)">Copiar</button><br> -->
         <label for="fechaTimbrado">Fecha de Timbrado: </label>
         <p id="fechaTimbrado"></p>
         <label for="subTotal">Sub Total: </label>
