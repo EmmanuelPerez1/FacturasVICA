@@ -1,0 +1,27 @@
+* {
+    margin: .5em;
+    padding: 0;
+}
+
+body h1 {
+    text-align: center;
+}
+
+div input {
+    width: 100%;
+    height: 2em;
+}
+
+button {
+    width: 30%;
+    height: 3em;
+    color: white;
+    background-color: #29baac;
+    text-align: center;
+    font-size: 1.1em;
+    border: 0;
+}
+
+div p {
+    border: 2px solid #29baac;
+}

@@ -1,5 +1,4 @@
-document.getElementById('readerXML').addEventListener('submit', function(e) {
-    e.preventDefault();
+function getData() {
     const xml = document.getElementById('xmlText').value;
 
     var UUID = /([a-zA-Z0-9]+)-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/;
@@ -27,9 +26,9 @@ document.getElementById('readerXML').addEventListener('submit', function(e) {
     if (resultcdP) {
         document.getElementById('condicionesDePago').innerHTML = `${resultcdP[0].replace('CondicionesDePago = ', '')}`;
     }
-})
+}
 
-function limpiarTexto() {
+function cleanResults() {
     document.getElementById('xmlText').value = '';
     document.getElementById('resultUUID').innerHTML = '';
     document.getElementById('fechaTimbrado').innerHTML = '';
