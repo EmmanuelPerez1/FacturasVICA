@@ -6,14 +6,18 @@ function getData() {
     var subtotal = /SubTotal="(\d+(\.\d+))/;
     var total = / Total="(\d+(\.\d+))/;
     var NUMEOC = /NUMEOC  (\d+)/i;
-    var condicionesDePago = /CondicionesDePago ="([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/;
+    var NUMEOCD = /NUMEOC	([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/;
+    var condicionesDePago = /CondicionesDePago="([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/;
 
     var resultUUID = UUID.exec(xml);
     var resultfT = fechaTimbrado.exec(xml);
     var resultsT = subtotal.exec(xml);
     var resultT = total.exec(xml);
     var resultOC = NUMEOC.exec(xml);
+    var resultOCD = NUMEOCD.exec(xml);
     var resultcdP = condicionesDePago.exec(xml);
+
+    console.log(resultOCD);
 
     document.getElementById('resultUUID').innerHTML = `${resultUUID[0]}`;
     document.getElementById('fechaTimbrado').innerHTML = `${resultfT[0]}`;
@@ -22,9 +26,12 @@ function getData() {
     if (resultOC) {
         document.getElementById('NUMEOC').innerHTML = `${resultOC[0].replace('NUMEOC  ', '')}`;
     }
+    if (resultOCD) {
+        document.getElementById('NUMEOC').innerHTML = `${resultOCD[0].replace('NUMEOC	', '')}`;
+    }
 
     if (resultcdP) {
-        document.getElementById('condicionesDePago').innerHTML = `${resultcdP[0].replace('CondicionesDePago = ', '')}`;
+        document.getElementById('condicionesDePago').innerHTML = `${resultcdP[0].replace('CondicionesDePago="', '')}`;
     }
 }
 
